@@ -32,11 +32,7 @@ La función core `evaluar_compromiso` aplica lógica condicional ramificada para
 Cuando el repositorio se gestione mediante control de versiones de Git, el despliegue se realizará con los siguientes comandos en tu terminal:
 
 ```bash
-# Clonar el repositorio de forma local
-git clone [https://github.com/tu-usuario/customer-engagement-matrix.git](https://github.com/tu-usuario/customer-engagement-matrix.git)
 
-# Ingresar al directorio del proyecto
-cd customer-engagement-matrix
 
 # Ejecutar el script analítico
 python main.py
