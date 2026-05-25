@@ -39,18 +39,25 @@ El resultado final se despliega de manera elegante en una **tabla limpia y orden
 
 ## 💻 Instalación y Uso
 
-1. Clona este repositorio en tu máquina local:
+
+Puedes poner en marcha este clasificador en tu computadora de dos maneras diferentes:
+
+### Opción A: Descarga rápida (Sin usar comandos de Git)
+1. Haz clic en el botón verde **"Code"** (arriba a la derecha) y selecciona **"Download ZIP"**.
+2. Descomprime el archivo `.zip` descargado en tu computadora.
+3. Abre tu terminal o consola de comandos, navega hasta esa carpeta y escribe:
    ```bash
-   git clone https://github.com/jedamesa/user-engagement-classifer.git
+   python NOMBRE_DE_TU_ARCHIVO.py
    ```
-2. Accede al directorio del proyecto:
-   ```bash
-   cd TU_REPOSITORIO
-   ```
-3. Ejecuta el archivo principal:
-   ```bash
-   python main.py
-   ```
+
+### Opción B: Mediante la Terminal (Para desarrolladores)
+Copia y pega este bloque de comandos en tu terminal para clonar, ingresar a la carpeta y ejecutar el programa automáticamente:
+```bash
+git clone https://github.com
+cd NOMBRE_DE_TU_REPOSITORIO
+python NOMBRE_DE_TU_ARCHIVO.py
+```
+
 
 ## 📝 Licencia
 
