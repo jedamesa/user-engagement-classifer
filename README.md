@@ -1,38 +1,57 @@
 # user-engagement-classifer
 Algoritmo simple para clasificar el compromiso de usuario basados en el tiempo de sesión y clics.
 
-```markdown
-# Sistema de Evaluación de Compromiso de Clientes (Customer Engagement Analysis)
+# User Session Classifier
 
-Un sistema analítico basado en consola desarrollado en **Python 3.13** para estructurar, validar y procesar métricas de interacción de usuarios mediante matrices bidimensionales. El sistema captura variables cuantitativas de comportamiento (duración de sesión y clics) para categorizar el nivel de lealtad o compromiso (*engagement*) de un cliente bajo reglas lógicas de negocio algorítmicas.
+Un script interactivo diseñado como una línea de producción secuencial para capturar, validar y clasificar el nivel de compromiso de los usuarios según su comportamiento en sesión.
 
-## 📊 Arquitectura del Sistema y Lógica de Datos
+## 🚀 Arquitectura y Funcionamiento
 
-El programa procesa la información estructurándola en una matriz dinámica en memoria. Cada fila representa una sesión de usuario única con el siguiente esquema de datos vectoriales:
+El programa procesa la información de manera controlada a través de tres grandes etapas lógicas:
 
-Fila = [ID_Cliente (str), Duracion (int), Clics (int)]
+### 1. Entrada y Validación de Datos (Sistema Anti-Fallos)
+El sistema arranca desplegando las instrucciones en pantalla e inicia un bucle dinámico para registrar a cada cliente solicitando tres variables aisladas:
+* **Identificador:** Nombre o ID de la sesión.
+* **Tiempo:** Duración de la visita medida en segundos.
+* **Interacciones:** Cantidad de clics realizados.
 
-### Reglas de Negocio Algorítmicas (Matriz de Decisiones)
+> 🛠️ **Robustez:** Si el operador introduce caracteres alfabéticos o texto en los campos numéricos (tiempo o clics), el programa captura el error, evita un colapso (*crash*), emite una alerta visual y vuelve a solicitar el dato correcto sin perder el progreso.
 
-La función core `evaluar_compromiso` aplica lógica condicional ramificada para determinar el nivel de interacción:
+### 2. Control de Umbral Obligatorio (El "Candado")
+Para garantizar una muestra de datos estadísticamente válida, el sistema aplica una regla de control estricta:
+* **Mínimo obligatorio:** Se deben registrar al menos **5 usuarios**.
+* El sistema bloquea cualquier intento de salida prematura antes de alcanzar este número.
+* Tras guardar con éxito el quinto registro, se desbloquea un menú numérico de navegación:
+  * `Presionar 1`: Continuar ingresando más usuarios.
+  * `Presionar 0`: Finalizar la captura y pasar al reporte.
 
-* **Alto:** Sesiones con una duración estrictamente mayor a 180 segundos **Y** más de 8 clics realizados.
-* **Bajo:** Sesiones con una duración menor a 60 segundos **O** menos de 3 clics realizados (criterio de rebote).
-* **Medio:** Sesiones que no cumplen con los extremos anteriores (comportamiento estándar).
-
----
-
-## 🛠️ Requisitos e Instalación
-
-### Prerrequisitos
-* **Motor:** Python 3.11 o superior (Desarrollado y testeado en **Python 3.13 64-bit**).
-* **Entorno:** Cualquier terminal de comandos (CMD, PowerShell, Bash) o el terminal integrado de **Visual Studio Code**.
-
-### Clonación y Configuración (Próximamente con Git)
-Cuando el repositorio se gestione mediante control de versiones de Git, el despliegue se realizará con los siguientes comandos en tu terminal:
-
-```bash
+### 3. Motor de Clasificación y Reporte Final
+Al cerrar la captura (`0`), el programa limpia por completo la pantalla para eliminar el ruido visual y evalúa cada registro mediante la siguiente matriz lógica de determinantes:
 
 
-# Ejecutar el script analítico
-python main.py
+| Clasificación | Condición Lógica | Criterio de Activación |
+| :--- | :--- | :--- |
+| 🔴 **Alto** | `Tiempo > 180` **Y** `Clics > 8` | Cumplimiento estricto de ambas métricas altas. |
+| 🔵 **Bajo** | `Tiempo < 60` **O** `Clics < 3` | Se activa si cualquiera de las dos métricas es deficiente. |
+| 🟡 **Medio** | *Rango intermedio* | Casos que se encuentran entre los límites de las reglas anteriores. |
+
+El resultado final se despliega de manera elegante en una **tabla limpia y ordenada** en la terminal, vinculando directamente el ID de cada cliente con su nivel de compromiso asignado.
+
+## 💻 Instalación y Uso
+
+1. Clona este repositorio en tu máquina local:
+   ```bash
+   git clone https://github.com
+   ```
+2. Accede al directorio del proyecto:
+   ```bash
+   cd TU_REPOSITORIO
+   ```
+3. Ejecuta el archivo principal:
+   ```bash
+   python main.py
+   ```
+
+## 📝 Licencia
+
+Este proyecto es de código abierto y está disponible para fines educativos o de portafolio personal.
