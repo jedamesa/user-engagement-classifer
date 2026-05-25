@@ -31,9 +31,9 @@ Al cerrar la captura (`0`), el programa limpia por completo la pantalla para eli
 
 | Clasificación | Condición Lógica | Criterio de Activación |
 | :--- | :--- | :--- |
-| 🔴 **Alto** | `Tiempo > 180` **Y** `Clics > 8` | Cumplimiento estricto de ambas métricas altas. |
-| 🔵 **Bajo** | `Tiempo < 60` **O** `Clics < 3` | Se activa si cualquiera de las dos métricas es deficiente. |
-| 🟡 **Medio** | *Rango intermedio* | Casos que se encuentran entre los límites de las reglas anteriores. |
+|  **Alto** | `Tiempo > 180` **Y** `Clics > 8` | Cumplimiento estricto de ambas métricas altas. |
+|  **Bajo** | `Tiempo < 60` **O** `Clics < 3` | Se activa si cualquiera de las dos métricas es deficiente. |
+|  **Medio** | *Rango intermedio* | Casos que se encuentran entre los límites de las reglas anteriores. |
 
 El resultado final se despliega de manera elegante en una **tabla limpia y ordenada** en la terminal, vinculando directamente el ID de cada cliente con su nivel de compromiso asignado.
 
