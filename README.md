@@ -41,7 +41,7 @@ El resultado final se despliega de manera elegante en una **tabla limpia y orden
 
 1. Clona este repositorio en tu máquina local:
    ```bash
-   git clone https://github.com
+   git clone https://github.com/jedamesa/user-engagement-classifer.git
    ```
 2. Accede al directorio del proyecto:
    ```bash
