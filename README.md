@@ -47,15 +47,15 @@ Puedes poner en marcha este clasificador en tu computadora de dos maneras difere
 2. Descomprime el archivo `.zip` descargado en tu computadora.
 3. Abre tu terminal o consola de comandos, navega hasta esa carpeta y escribe:
    ```bash
-   python NOMBRE_DE_TU_ARCHIVO.py
+   python ejercicio_1_fase5.py
    ```
 
 ### Opción B: Mediante la Terminal (Para desarrolladores)
 Copia y pega este bloque de comandos en tu terminal para clonar, ingresar a la carpeta y ejecutar el programa automáticamente:
 ```bash
-git clone https://github.com
-cd NOMBRE_DE_TU_REPOSITORIO
-python NOMBRE_DE_TU_ARCHIVO.py
+git clone https://github.com/jedamesa/user-engagement-classifer.git
+cd user-engagement-classifer
+python ejercicio_1_fase5.py
 ```
 
 
